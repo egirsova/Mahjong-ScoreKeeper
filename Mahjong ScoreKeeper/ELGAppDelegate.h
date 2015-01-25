@@ -7,8 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class ELGAppController;
 
 @interface ELGAppDelegate : NSObject <NSApplicationDelegate>
+{
+    ELGAppController *appController;
+}
 
 @property (assign) IBOutlet NSWindow *window;
 

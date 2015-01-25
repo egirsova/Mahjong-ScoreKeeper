@@ -13,6 +13,12 @@
 		9EE9C0F11A7569C9005724AD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9C0EF1A7569C9005724AD /* Credits.rtf */; };
 		9EE9C0F41A7569C9005724AD /* ELGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9C0F31A7569C9005724AD /* ELGAppDelegate.m */; };
 		9EE9C0F71A7569C9005724AD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9C0F51A7569C9005724AD /* MainMenu.xib */; };
+		9EE9C0FF1A756C85005724AD /* ELGAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9C0FE1A756C85005724AD /* ELGAppController.m */; };
+		9EE9C1031A756FD8005724AD /* ELGAddPlayersController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9C1011A756FD8005724AD /* ELGAddPlayersController.m */; };
+		9EE9C1041A756FD8005724AD /* ELGAddPlayersController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9C1021A756FD8005724AD /* ELGAddPlayersController.xib */; };
+		9EE9C1071A757187005724AD /* ELGPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9C1061A757187005724AD /* ELGPlayer.m */; };
+		9EE9C10F1A7575B8005724AD /* ELGMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9C10D1A7575B8005724AD /* ELGMainWindowController.m */; };
+		9EE9C1101A7575B8005724AD /* ELGMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9C10E1A7575B8005724AD /* ELGMainWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,17 @@
 		9EE9C0F21A7569C9005724AD /* ELGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELGAppDelegate.h; sourceTree = "<group>"; };
 		9EE9C0F31A7569C9005724AD /* ELGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELGAppDelegate.m; sourceTree = "<group>"; };
 		9EE9C0F61A7569C9005724AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9EE9C0FD1A756C85005724AD /* ELGAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELGAppController.h; sourceTree = "<group>"; };
+		9EE9C0FE1A756C85005724AD /* ELGAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELGAppController.m; sourceTree = "<group>"; };
+		9EE9C1001A756FD8005724AD /* ELGAddPlayersController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELGAddPlayersController.h; sourceTree = "<group>"; };
+		9EE9C1011A756FD8005724AD /* ELGAddPlayersController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELGAddPlayersController.m; sourceTree = "<group>"; };
+		9EE9C1021A756FD8005724AD /* ELGAddPlayersController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELGAddPlayersController.xib; sourceTree = "<group>"; };
+		9EE9C1051A757187005724AD /* ELGPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELGPlayer.h; sourceTree = "<group>"; };
+		9EE9C1061A757187005724AD /* ELGPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELGPlayer.m; sourceTree = "<group>"; };
+		9EE9C1091A7572B3005724AD /* ELGDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELGDefinitions.h; sourceTree = "<group>"; };
+		9EE9C10C1A7575B8005724AD /* ELGMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELGMainWindowController.h; sourceTree = "<group>"; };
+		9EE9C10D1A7575B8005724AD /* ELGMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELGMainWindowController.m; sourceTree = "<group>"; };
+		9EE9C10E1A7575B8005724AD /* ELGMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELGMainWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +99,20 @@
 		9EE9C0E61A7569C9005724AD /* Mahjong ScoreKeeper */ = {
 			isa = PBXGroup;
 			children = (
+				9EE9C10C1A7575B8005724AD /* ELGMainWindowController.h */,
+				9EE9C10D1A7575B8005724AD /* ELGMainWindowController.m */,
+				9EE9C10E1A7575B8005724AD /* ELGMainWindowController.xib */,
+				9EE9C1001A756FD8005724AD /* ELGAddPlayersController.h */,
+				9EE9C1011A756FD8005724AD /* ELGAddPlayersController.m */,
+				9EE9C1021A756FD8005724AD /* ELGAddPlayersController.xib */,
+				9EE9C0FD1A756C85005724AD /* ELGAppController.h */,
+				9EE9C0FE1A756C85005724AD /* ELGAppController.m */,
 				9EE9C0F21A7569C9005724AD /* ELGAppDelegate.h */,
 				9EE9C0F31A7569C9005724AD /* ELGAppDelegate.m */,
 				9EE9C0F51A7569C9005724AD /* MainMenu.xib */,
+				9EE9C1091A7572B3005724AD /* ELGDefinitions.h */,
+				9EE9C1051A757187005724AD /* ELGPlayer.h */,
+				9EE9C1061A757187005724AD /* ELGPlayer.m */,
 				9EE9C0E71A7569C9005724AD /* Supporting Files */,
 			);
 			path = "Mahjong ScoreKeeper";
@@ -157,6 +185,8 @@
 				9EE9C0EB1A7569C9005724AD /* InfoPlist.strings in Resources */,
 				9EE9C0F11A7569C9005724AD /* Credits.rtf in Resources */,
 				9EE9C0F71A7569C9005724AD /* MainMenu.xib in Resources */,
+				9EE9C1041A756FD8005724AD /* ELGAddPlayersController.xib in Resources */,
+				9EE9C1101A7575B8005724AD /* ELGMainWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +199,10 @@
 			files = (
 				9EE9C0ED1A7569C9005724AD /* main.m in Sources */,
 				9EE9C0F41A7569C9005724AD /* ELGAppDelegate.m in Sources */,
+				9EE9C0FF1A756C85005724AD /* ELGAppController.m in Sources */,
+				9EE9C1031A756FD8005724AD /* ELGAddPlayersController.m in Sources */,
+				9EE9C1071A757187005724AD /* ELGPlayer.m in Sources */,
+				9EE9C10F1A7575B8005724AD /* ELGMainWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

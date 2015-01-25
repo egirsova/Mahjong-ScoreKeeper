@@ -7,12 +7,14 @@
 //
 
 #import "ELGAppDelegate.h"
+#import "ELGAppController.h"
 
 @implementation ELGAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    appController = [[ELGAppController alloc] init];
 }
 
 @end
