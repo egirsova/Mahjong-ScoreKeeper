@@ -7,7 +7,26 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class ELGAddScoresController;
 
 @interface ELGMainWindowController : NSWindowController
+
+{    
+    ELGAddScoresController *addScoresController;
+    
+    IBOutlet NSTextField *northPlayerNameLabel;
+    IBOutlet NSTextField *southPlayerNameLabel;
+    IBOutlet NSTextField *eastPlayerNameLabel;
+    IBOutlet NSTextField *westPlayerNameLabel;
+    
+    IBOutlet NSTextField *northPlayerScoreLabel;
+    IBOutlet NSTextField *southPlayerScoreLabel;
+    IBOutlet NSTextField *eastPlayerScoreLabel;
+    IBOutlet NSTextField *westPlayerScoreLabel;
+}
+
+@property (nonatomic) NSMutableArray *playerArray;
+
+- (id)initWithWindowNibName:(NSString *)windowNibName playerArray:(NSMutableArray *)array;
 
 @end

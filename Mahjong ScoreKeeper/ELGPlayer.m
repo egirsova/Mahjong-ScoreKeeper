@@ -9,6 +9,7 @@
 #import "ELGPlayer.h"
 
 @implementation ELGPlayer
+@synthesize roundWinner;
 
 - (instancetype)initWithName:(NSString *)n wind:(int)w
 {

@@ -8,9 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 @class ELGPlayer;
+@class ELGMainWindowController;
 
 @interface ELGAddPlayersController : NSWindowController
 {
+    ELGMainWindowController *mainWindowController;
+    
     IBOutlet NSTextField *playerOneNameTF;
     IBOutlet NSTextField *playerTwoNameTF;
     IBOutlet NSTextField *playerThreeNameTF;

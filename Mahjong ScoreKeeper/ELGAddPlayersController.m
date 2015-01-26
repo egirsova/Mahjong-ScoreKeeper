@@ -9,6 +9,7 @@
 #import "ELGAddPlayersController.h"
 #import "ELGDefinitions.h"
 #import "ELGPlayer.h"
+#import "ELGMainWindowController.h"
 
 @interface ELGAddPlayersController ()
 
@@ -76,9 +77,15 @@
     {
         [self initializePlayers];
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"StartGame"
-                                                            object:nil];
+        /*[[NSNotificationCenter defaultCenter] postNotificationName:@"StartGame"
+                                                            object:nil];*/
         [self.window close];
+        
+        // Initializes mainWindowController using overridden method
+        if(!mainWindowController){
+            mainWindowController = [[ELGMainWindowController alloc] initWithWindowNibName:@"ELGMainWindowController" playerArray:playerArray];
+        }
+        [mainWindowController showWindow:self];
         
     }
     
