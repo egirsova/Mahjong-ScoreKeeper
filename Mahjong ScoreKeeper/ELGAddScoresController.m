@@ -52,7 +52,7 @@
     // Listens to notifications
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateScoreLabels)
-                                                 name:@"donePlayerOne"
+                                                 name:@"doneAddScore"
                                                object:nil];
 
 }
@@ -69,42 +69,48 @@
 {
     ELGPlayer *player = playerArray[0];
     [playerOneScoreLabel setStringValue:[@(player.roundPoints) stringValue]];
+    player = playerArray[1];
+    [playerTwoScoreLabel setStringValue:[@(player.roundPoints) stringValue]];
+    player = playerArray[2];
+    [playerThreeScoreLabel setStringValue:[@(player.roundPoints) stringValue]];
+    player = playerArray[3];
+    [playerFourScoreLabel setStringValue:[@(player.roundPoints) stringValue]];
 }
 
 - (IBAction)playerOneCalculate:(id)sender
 {
     if(!addScorePlayerOneController)
     {
-        addScorePlayerOneController = [[ELGAddScorePlayerOneController alloc] initWithWindowNibName:@"ELGAddScorePlayerOneController" playerArray:playerArray];
+        addScorePlayerOneController = [[ELGAddScorePlayerOneController alloc] initWithWindowNibName:@"ELGAddScorePlayerOneController" playerArray:playerArray playerInt:0];
     }
     [addScorePlayerOneController showWindow:self];
 }
 
 - (IBAction)playerTwoCalculate:(id)sender
 {
-    /*if(!addScorePlayerOneController)
-     {
-     addScorePlayerOneController = [[ELGAddScorePlayerOneController alloc] initWithWindowNibName:@"ELGAddScoresController" playerArray:playerArray];
-     }
-     [addScorePlayerOneController showWindow:self];*/
+    if(!addScorePlayerTwoController)
+    {
+        addScorePlayerTwoController = [[ELGAddScorePlayerOneController alloc] initWithWindowNibName:@"ELGAddScorePlayerOneController" playerArray:playerArray playerInt:1];
+    }
+    [addScorePlayerTwoController showWindow:self];
 }
 
 - (IBAction)playerThreeCalculate:(id)sender
 {
-    /*if(!addScorePlayerOneController)
-     {
-     addScorePlayerOneController = [[ELGAddScorePlayerOneController alloc] initWithWindowNibName:@"ELGAddScoresController" playerArray:playerArray];
-     }
-     [addScorePlayerOneController showWindow:self];*/
+    if(!addScorePlayerThreeController)
+    {
+        addScorePlayerThreeController = [[ELGAddScorePlayerOneController alloc] initWithWindowNibName:@"ELGAddScorePlayerOneController" playerArray:playerArray playerInt:2];
+    }
+    [addScorePlayerThreeController showWindow:self];
 }
 
 - (IBAction)playerFourCalculate:(id)sender
 {
-    /*if(!addScorePlayerOneController)
+    if(!addScorePlayerFourController)
     {
-        addScorePlayerOneController = [[ELGAddScorePlayerOneController alloc] initWithWindowNibName:@"ELGAddScoresController" playerArray:playerArray];
+        addScorePlayerFourController = [[ELGAddScorePlayerOneController alloc] initWithWindowNibName:@"ELGAddScorePlayerOneController" playerArray:playerArray playerInt:3];
     }
-    [addScorePlayerOneController showWindow:self];*/
+    [addScorePlayerFourController showWindow:self];
 }
 
 - (IBAction)submitButton:(id)sender

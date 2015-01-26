@@ -55,11 +55,13 @@
     IBOutlet NSButton *firstDiscardedPiece;
 }
 @property (nonatomic) NSMutableArray *playerArray;
+@property (nonatomic) int playerInt;
 
-- (id)initWithWindowNibName:(NSString *)windowNibName playerArray:(NSMutableArray *)array;
+- (id)initWithWindowNibName:(NSString *)windowNibName playerArray:(NSMutableArray *)array playerInt:(int)player;
 
 - (IBAction)doneButton:(id)sender;
 
+- (void)initializePopUpButtons;
 - (void)calculateRoundPoints;
 
 @end

@@ -16,6 +16,7 @@
 
 @implementation ELGAddScorePlayerOneController
 @synthesize playerArray;
+@synthesize playerInt;
 
 #pragma mark - Initialization
 - (id)initWithWindow:(NSWindow *)window
@@ -29,11 +30,12 @@
 }
 
 // Overrides the typical initWithWindowNibName to also read in the playerArray
-- (id)initWithWindowNibName:(NSString *)windowNibName playerArray:(NSMutableArray *)array
+- (id)initWithWindowNibName:(NSString *)windowNibName playerArray:(NSMutableArray *)array playerInt:(int)player
 {
     self = [super initWithWindowNibName:windowNibName];
     if (self) {
         self.playerArray = array;
+        self.playerInt = player;
     }
     
     return self;
@@ -44,6 +46,7 @@
     [super windowDidLoad];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    [self initializePopUpButtons];
 }
 
 #pragma mark - Action Methods
@@ -51,33 +54,183 @@
 {
     [self calculateRoundPoints];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"donePlayerOne"
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"doneAddScore"
                                                         object:nil];
     
     [self.window close];
 }
 
 #pragma mark - Additional Helper Methods
+- (void)initializePopUpButtons
+{
+    // Open Pong PopUp Buttons
+    [oPRegular removeAllItems];
+    [oPRegular addItemWithTitle:@"0"];
+    [oPRegular addItemWithTitle:@"1"];
+    [oPRegular addItemWithTitle:@"2"];
+    [oPRegular addItemWithTitle:@"3"];
+    [oPRegular addItemWithTitle:@"4"];
+    
+    [oPOneOrNine removeAllItems];
+    [oPOneOrNine addItemWithTitle:@"0"];
+    [oPOneOrNine addItemWithTitle:@"1"];
+    [oPOneOrNine addItemWithTitle:@"2"];
+    [oPOneOrNine addItemWithTitle:@"3"];
+    [oPOneOrNine addItemWithTitle:@"4"];
+    
+    [oPWind removeAllItems];
+    [oPWind addItemWithTitle:@"0"];
+    [oPWind addItemWithTitle:@"1"];
+    [oPWind addItemWithTitle:@"2"];
+    [oPWind addItemWithTitle:@"3"];
+    [oPWind addItemWithTitle:@"4"];
+    
+    [oPDragon removeAllItems];
+    [oPDragon addItemWithTitle:@"0"];
+    [oPDragon addItemWithTitle:@"1"];
+    [oPDragon addItemWithTitle:@"2"];
+    [oPDragon addItemWithTitle:@"3"];
+    [oPDragon addItemWithTitle:@"4"];
+    
+    // Closed Pong PopUp Buttons
+    [cPRegular removeAllItems];
+    [cPRegular addItemWithTitle:@"0"];
+    [cPRegular addItemWithTitle:@"1"];
+    [cPRegular addItemWithTitle:@"2"];
+    [cPRegular addItemWithTitle:@"3"];
+    [cPRegular addItemWithTitle:@"4"];
+    
+    [cPOneOrNine removeAllItems];
+    [cPOneOrNine addItemWithTitle:@"0"];
+    [cPOneOrNine addItemWithTitle:@"1"];
+    [cPOneOrNine addItemWithTitle:@"2"];
+    [cPOneOrNine addItemWithTitle:@"3"];
+    [cPOneOrNine addItemWithTitle:@"4"];
+    
+    [cPWind removeAllItems];
+    [cPWind addItemWithTitle:@"0"];
+    [cPWind addItemWithTitle:@"1"];
+    [cPWind addItemWithTitle:@"2"];
+    [cPWind addItemWithTitle:@"3"];
+    [cPWind addItemWithTitle:@"4"];
+    
+    [cPDragon removeAllItems];
+    [cPDragon addItemWithTitle:@"0"];
+    [cPDragon addItemWithTitle:@"1"];
+    [cPDragon addItemWithTitle:@"2"];
+    [cPDragon addItemWithTitle:@"3"];
+    [cPDragon addItemWithTitle:@"4"];
+    
+    // Open Kong PopUp Buttons
+    [oKRegular removeAllItems];
+    [oKRegular addItemWithTitle:@"0"];
+    [oKRegular addItemWithTitle:@"1"];
+    [oKRegular addItemWithTitle:@"2"];
+    [oKRegular addItemWithTitle:@"3"];
+    [oKRegular addItemWithTitle:@"4"];
+    
+    [oKOneOrNine removeAllItems];
+    [oKOneOrNine addItemWithTitle:@"0"];
+    [oKOneOrNine addItemWithTitle:@"1"];
+    [oKOneOrNine addItemWithTitle:@"2"];
+    [oKOneOrNine addItemWithTitle:@"3"];
+    [oKOneOrNine addItemWithTitle:@"4"];
+    
+    [oKWind removeAllItems];
+    [oKWind addItemWithTitle:@"0"];
+    [oKWind addItemWithTitle:@"1"];
+    [oKWind addItemWithTitle:@"2"];
+    [oKWind addItemWithTitle:@"3"];
+    [oKWind addItemWithTitle:@"4"];
+    
+    [oKDragon removeAllItems];
+    [oKDragon addItemWithTitle:@"0"];
+    [oKDragon addItemWithTitle:@"1"];
+    [oKDragon addItemWithTitle:@"2"];
+    [oKDragon addItemWithTitle:@"3"];
+    [oKDragon addItemWithTitle:@"4"];
+    
+    // Closed Kong PopUp Buttons
+    [cKRegular removeAllItems];
+    [cKRegular addItemWithTitle:@"0"];
+    [cKRegular addItemWithTitle:@"1"];
+    [cKRegular addItemWithTitle:@"2"];
+    [cKRegular addItemWithTitle:@"3"];
+    [cKRegular addItemWithTitle:@"4"];
+    
+    [cKOneOrNine removeAllItems];
+    [cKOneOrNine addItemWithTitle:@"0"];
+    [cKOneOrNine addItemWithTitle:@"1"];
+    [cKOneOrNine addItemWithTitle:@"2"];
+    [cKOneOrNine addItemWithTitle:@"3"];
+    [cKOneOrNine addItemWithTitle:@"4"];
+    
+    [cKWind removeAllItems];
+    [cKWind addItemWithTitle:@"0"];
+    [cKWind addItemWithTitle:@"1"];
+    [cKWind addItemWithTitle:@"2"];
+    [cKWind addItemWithTitle:@"3"];
+    [cKWind addItemWithTitle:@"4"];
+    
+    [cKDragon removeAllItems];
+    [cKDragon addItemWithTitle:@"0"];
+    [cKDragon addItemWithTitle:@"1"];
+    [cKDragon addItemWithTitle:@"2"];
+    [cKDragon addItemWithTitle:@"3"];
+    [cKDragon addItemWithTitle:@"4"];
+    
+    // Additional Points Buttons
+    [dWPair removeAllItems];
+    [dWPair addItemWithTitle:@"0"];
+    [dWPair addItemWithTitle:@"1"];
+    [dWPair addItemWithTitle:@"2"];
+    [dWPair addItemWithTitle:@"3"];
+    [dWPair addItemWithTitle:@"4"];
+    
+    [pKDragon removeAllItems];
+    [pKDragon addItemWithTitle:@"0"];
+    [pKDragon addItemWithTitle:@"1"];
+    [pKDragon addItemWithTitle:@"2"];
+    [pKDragon addItemWithTitle:@"3"];
+    
+    [flowers removeAllItems];
+    [flowers addItemWithTitle:@"0"];
+    [flowers addItemWithTitle:@"1"];
+    [flowers addItemWithTitle:@"2"];
+    [flowers addItemWithTitle:@"3"];
+    [flowers addItemWithTitle:@"4"];
+    [flowers addItemWithTitle:@"5"];
+    [flowers addItemWithTitle:@"6"];
+    [flowers addItemWithTitle:@"7"];
+    [flowers addItemWithTitle:@"8"];
+    
+    [ownFlowers removeAllItems];
+    [ownFlowers addItemWithTitle:@"0"];
+    [ownFlowers addItemWithTitle:@"1"];
+    [ownFlowers addItemWithTitle:@"2"];
+    
+}
+
 - (void)calculateRoundPoints
 {
-    int tempRoundPoints = 0;
+    NSInteger tempRoundPoints = 0;
     // Gets values from inputted fields
-    int OPRegularCount = [[[oPRegular selectedItem] title] integerValue];
-    int OPOneOrNineCount = [[[oPOneOrNine selectedItem] title] integerValue];
-    int OPWindCount = [[[oPWind selectedItem] title] integerValue];
-    int OPDragonCount = [[[oPDragon selectedItem] title] integerValue];
-    int OKRegularCount = [[[oKRegular selectedItem] title] integerValue];
-    int OKOneOrNineCount = [[[oKOneOrNine selectedItem] title] integerValue];
-    int OKWindCount = [[[oKWind selectedItem] title] integerValue];
-    int OKDragonCount = [[[oKDragon selectedItem] title] integerValue];
-    int CPRegularCount = [[[cPRegular selectedItem] title] integerValue];
-    int CPOneOrNineCount = [[[cPOneOrNine selectedItem] title] integerValue];
-    int CPWindCount = [[[cPWind selectedItem] title] integerValue];
-    int CPDragonCount = [[[cPDragon selectedItem] title] integerValue];
-    int CKRegularCount = [[[cKRegular selectedItem] title] integerValue];
-    int CKOneOrNineCount = [[[cKOneOrNine selectedItem] title] integerValue];
-    int CKWindCount = [[[cKWind selectedItem] title] integerValue];
-    int CKDragonCount = [[[cKDragon selectedItem] title] integerValue];
+    NSInteger OPRegularCount = [[[oPRegular selectedItem] title] integerValue];
+    NSInteger OPOneOrNineCount = [[[oPOneOrNine selectedItem] title] integerValue];
+    NSInteger OPWindCount = [[[oPWind selectedItem] title] integerValue];
+    NSInteger OPDragonCount = [[[oPDragon selectedItem] title] integerValue];
+    NSInteger OKRegularCount = [[[oKRegular selectedItem] title] integerValue];
+    NSInteger OKOneOrNineCount = [[[oKOneOrNine selectedItem] title] integerValue];
+    NSInteger OKWindCount = [[[oKWind selectedItem] title] integerValue];
+    NSInteger OKDragonCount = [[[oKDragon selectedItem] title] integerValue];
+    NSInteger CPRegularCount = [[[cPRegular selectedItem] title] integerValue];
+    NSInteger CPOneOrNineCount = [[[cPOneOrNine selectedItem] title] integerValue];
+    NSInteger CPWindCount = [[[cPWind selectedItem] title] integerValue];
+    NSInteger CPDragonCount = [[[cPDragon selectedItem] title] integerValue];
+    NSInteger CKRegularCount = [[[cKRegular selectedItem] title] integerValue];
+    NSInteger CKOneOrNineCount = [[[cKOneOrNine selectedItem] title] integerValue];
+    NSInteger CKWindCount = [[[cKWind selectedItem] title] integerValue];
+    NSInteger CKDragonCount = [[[cKDragon selectedItem] title] integerValue];
     tempRoundPoints
     = (OPRegularCount * OP_REGULAR)
     + (OPOneOrNineCount * OP_ONEORNINE)
@@ -96,60 +249,60 @@
     + (CKDragonCount * CK_DRAGON)
     + (CKWindCount * CK_WIND);
     
-    ELGPlayer *player = playerArray[0];
+    ELGPlayer *player = playerArray[playerInt];
     BOOL winner = [winnerOfRound isEnabled];
     [player setRoundWinner:winner];
-    if ([winnerOfRound isEnabled]) {
+    if ([winnerOfRound state] == NSOnState) {
         tempRoundPoints = tempRoundPoints + 10;
     }
-    if ([zeroPoints isEnabled]) {
+    if ([zeroPoints state] == NSOnState) {
         tempRoundPoints = 20;
     }
-    if ([drawThemselves isEnabled]) {
+    if ([drawThemselves state] == NSOnState) {
         tempRoundPoints = tempRoundPoints + 2;
     }
-    if ([onlyWinningPiece isEnabled]) {
+    if ([onlyWinningPiece state] == NSOnState) {
         tempRoundPoints = tempRoundPoints + 2;
     }
-    int flowerCount = [[[flowers selectedItem] title] integerValue];
+    NSInteger flowerCount = [[[flowers selectedItem] title] integerValue];
     tempRoundPoints = tempRoundPoints + (flowerCount * FLOWER);
-    int dragonWindPairCount = [[[dWPair selectedItem] title] integerValue];
+    NSInteger dragonWindPairCount = [[[dWPair selectedItem] title] integerValue];
     tempRoundPoints = tempRoundPoints + (dragonWindPairCount * DWPAIR);
-    int ownFlowerCount = [[[ownFlowers selectedItem] title] integerValue];
+    NSInteger ownFlowerCount = [[[ownFlowers selectedItem] title] integerValue];
     if (ownFlowerCount > 0) {
         tempRoundPoints = tempRoundPoints * (ownFlowerCount * OWNFLOWER);
     }
-    int pkDragonCount = [[[pKDragon selectedItem] title] integerValue];
+    NSInteger pkDragonCount = [[[pKDragon selectedItem] title] integerValue];
     if (pkDragonCount > 0) {
         tempRoundPoints = tempRoundPoints * (pkDragonCount * PKDRAGON);
     }
-    if ([pKOwnWind state] == TRUE) {
+    if ([pKOwnWind state] == NSOnState) {
         tempRoundPoints = tempRoundPoints * 2;
     }
-    if ([groupAndDW isEnabled]) {
+    if ([groupAndDW state] == NSOnState) {
         tempRoundPoints = tempRoundPoints * 2;
     }
-    if ([noStraights isEnabled]) {
+    if ([noStraights state] == NSOnState) {
         tempRoundPoints = tempRoundPoints * 2;
     }
-    if ([singleGroup isEnabled]) {
+    if ([singleGroup state] == NSOnState) {
         tempRoundPoints = tempRoundPoints * 6;
     }
-    if ([fromDeadWall isEnabled]) {
+    if ([fromDeadWall state] == NSOnState) {
         tempRoundPoints = tempRoundPoints * 2;
     }
-    if ([lastPossiblePiece isEnabled]) {
+    if ([lastPossiblePiece state] == NSOnState) {
         tempRoundPoints = tempRoundPoints * 2;
     }
-    if ([firstCardFromWall isEnabled]) {
+    if ([firstCardFromWall state] == NSOnState) {
         tempRoundPoints = 300;
     }
-    if ([firstDiscardedPiece isEnabled]) {
+    if ([firstDiscardedPiece state] == NSOnState) {
         tempRoundPoints = 300;
     }
     
     player.roundPoints = tempRoundPoints;
-    [playerArray replaceObjectAtIndex:0 withObject:player];
+    [playerArray replaceObjectAtIndex:playerInt withObject:player];
 }
 
 @end

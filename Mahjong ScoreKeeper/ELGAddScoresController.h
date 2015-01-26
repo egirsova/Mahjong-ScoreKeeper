@@ -11,7 +11,11 @@
 
 @interface ELGAddScoresController : NSWindowController
 {
+    // Separate instances for each players
     ELGAddScorePlayerOneController *addScorePlayerOneController;
+    ELGAddScorePlayerOneController *addScorePlayerTwoController;
+    ELGAddScorePlayerOneController *addScorePlayerThreeController;
+    ELGAddScorePlayerOneController *addScorePlayerFourController;
     
     IBOutlet NSTextField *playerOneNameLabel;
     IBOutlet NSTextField *playerTwoNameLabel;
