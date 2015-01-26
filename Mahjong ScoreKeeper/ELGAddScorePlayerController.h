@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ELGAddScorePlayerOneController : NSWindowController
+@interface ELGAddScorePlayerController : NSWindowController
 {
     // Open Pong PopUp Buttons
     IBOutlet NSPopUpButton *oPRegular;

@@ -7,15 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
-@class ELGAddScorePlayerOneController;
+@class ELGAddScorePlayerController;
 
 @interface ELGAddScoresController : NSWindowController
 {
     // Separate instances for each players
-    ELGAddScorePlayerOneController *addScorePlayerOneController;
-    ELGAddScorePlayerOneController *addScorePlayerTwoController;
-    ELGAddScorePlayerOneController *addScorePlayerThreeController;
-    ELGAddScorePlayerOneController *addScorePlayerFourController;
+    ELGAddScorePlayerController *addScorePlayerOneController;
+    ELGAddScorePlayerController *addScorePlayerTwoController;
+    ELGAddScorePlayerController *addScorePlayerThreeController;
+    ELGAddScorePlayerController *addScorePlayerFourController;
     
     IBOutlet NSTextField *playerOneNameLabel;
     IBOutlet NSTextField *playerTwoNameLabel;
@@ -26,6 +26,9 @@
     IBOutlet NSTextField *playerTwoScoreLabel;
     IBOutlet NSTextField *playerThreeScoreLabel;
     IBOutlet NSTextField *playerFourScoreLabel;
+    
+    IBOutlet NSTextField *roundCountLabel;
+    int submitButtonCount;
 }
 
 @property (nonatomic) NSMutableArray *playerArray;
@@ -40,5 +43,6 @@
 
 - (void)updateNameLabels;
 - (void)updateScoreLabels;
+- (BOOL)checkWinnerDuplicates;
 
 @end

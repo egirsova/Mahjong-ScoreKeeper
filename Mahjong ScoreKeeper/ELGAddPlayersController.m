@@ -172,25 +172,25 @@
 
 - (void)initializePlayers
 {
-    NSString *playerOneName = [playerOneNameTF stringValue];
     NSString *playerOneWind = [[playerOneWindPU selectedItem] title];
     int playerOneWindInt = [self stringWindToInt:playerOneWind];
-    ELGPlayer *playerOne = [[ELGPlayer alloc] initWithName:[playerOneNameTF stringValue]wind:playerOneWindInt];
+    ELGPlayer *playerOne = [[ELGPlayer alloc] initWithName:[playerOneNameTF stringValue]
+                                                      wind:playerOneWindInt];
     
-    NSString *playerTwoName = [playerTwoNameTF stringValue];
     NSString *playerTwoWind = [[playerTwoWindPU selectedItem] title];
     int playerTwoWindInt = [self stringWindToInt:playerTwoWind];
-    ELGPlayer *playerTwo = [[ELGPlayer alloc] initWithName:[playerTwoNameTF stringValue]wind:playerTwoWindInt];
+    ELGPlayer *playerTwo = [[ELGPlayer alloc] initWithName:[playerTwoNameTF stringValue]
+                                                      wind:playerTwoWindInt];
     
-    NSString *playerThreeName = [playerThreeNameTF stringValue];
     NSString *playerThreeWind = [[playerThreeWindPU selectedItem] title];
     int playerThreeWindInt = [self stringWindToInt:playerThreeWind];
-    ELGPlayer *playerThree = [[ELGPlayer alloc] initWithName:[playerThreeNameTF stringValue]wind:playerThreeWindInt];
+    ELGPlayer *playerThree = [[ELGPlayer alloc] initWithName:[playerThreeNameTF stringValue]
+                                                        wind:playerThreeWindInt];
     
-    NSString *playerFourName = [playerFourNameTF stringValue];
     NSString *playerFourWind = [[playerFourWindPU selectedItem] title];
     int playerFourWindInt = [self stringWindToInt:playerFourWind];
-    ELGPlayer *playerFour = [[ELGPlayer alloc] initWithName:[playerFourNameTF stringValue]wind:playerFourWindInt];
+    ELGPlayer *playerFour = [[ELGPlayer alloc] initWithName:[playerFourNameTF stringValue]
+                                                       wind:playerFourWindInt];
     
     playerArray = [NSMutableArray array];
     [playerArray addObject:playerOne];

@@ -7,7 +7,7 @@
 //
 
 #import "ELGAddScoresController.h"
-#import "ELGAddScorePlayerOneController.h"
+#import "ELGAddScorePlayerController.h"
 #import "ELGPlayer.h"
 
 @interface ELGAddScoresController ()
@@ -45,6 +45,10 @@
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     
     [self updateNameLabels];
+    int rounds = [playerArray[0] roundsPlayed];
+    NSString *roundLabel = [NSString stringWithFormat:@"Round %d Scores", rounds];
+    [roundCountLabel setStringValue:roundLabel];
+    submitButtonCount = 0;
 }
 
 - (void)awakeFromNib
@@ -54,7 +58,6 @@
                                              selector:@selector(updateScoreLabels)
                                                  name:@"doneAddScore"
                                                object:nil];
-
 }
 
 - (void)updateNameLabels
@@ -77,11 +80,26 @@
     [playerFourScoreLabel setStringValue:[@(player.roundPoints) stringValue]];
 }
 
+- (BOOL)checkWinnerDuplicates
+{
+    int winnersCount = 0;
+    for(int i = 0; i < 4; i++)
+    {
+        if([playerArray[i] roundWinner]){
+            winnersCount++;
+        }
+    }
+    if(winnersCount > 1)
+        return true;
+    else
+        return false;
+}
+
 - (IBAction)playerOneCalculate:(id)sender
 {
     if(!addScorePlayerOneController)
     {
-        addScorePlayerOneController = [[ELGAddScorePlayerOneController alloc] initWithWindowNibName:@"ELGAddScorePlayerOneController" playerArray:playerArray playerInt:0];
+        addScorePlayerOneController = [[ELGAddScorePlayerController alloc] initWithWindowNibName:@"ELGAddScorePlayerController" playerArray:playerArray playerInt:0];
     }
     [addScorePlayerOneController showWindow:self];
 }
@@ -90,7 +108,7 @@
 {
     if(!addScorePlayerTwoController)
     {
-        addScorePlayerTwoController = [[ELGAddScorePlayerOneController alloc] initWithWindowNibName:@"ELGAddScorePlayerOneController" playerArray:playerArray playerInt:1];
+        addScorePlayerTwoController = [[ELGAddScorePlayerController alloc] initWithWindowNibName:@"ELGAddScorePlayerController" playerArray:playerArray playerInt:1];
     }
     [addScorePlayerTwoController showWindow:self];
 }
@@ -99,7 +117,7 @@
 {
     if(!addScorePlayerThreeController)
     {
-        addScorePlayerThreeController = [[ELGAddScorePlayerOneController alloc] initWithWindowNibName:@"ELGAddScorePlayerOneController" playerArray:playerArray playerInt:2];
+        addScorePlayerThreeController = [[ELGAddScorePlayerController alloc] initWithWindowNibName:@"ELGAddScorePlayerController" playerArray:playerArray playerInt:2];
     }
     [addScorePlayerThreeController showWindow:self];
 }
@@ -108,14 +126,38 @@
 {
     if(!addScorePlayerFourController)
     {
-        addScorePlayerFourController = [[ELGAddScorePlayerOneController alloc] initWithWindowNibName:@"ELGAddScorePlayerOneController" playerArray:playerArray playerInt:3];
+        addScorePlayerFourController = [[ELGAddScorePlayerController alloc] initWithWindowNibName:@"ELGAddScorePlayerController" playerArray:playerArray playerInt:3];
     }
     [addScorePlayerFourController showWindow:self];
 }
 
 - (IBAction)submitButton:(id)sender
 {
-    
+    // Check if more than one player has "winner" checked
+    if([self checkWinnerDuplicates]){
+        
+        // Initializes errorLabel if it has not been initialized yet
+        if(submitButtonCount == 0){
+        NSTextField *errorLabel = [[NSTextField alloc] initWithFrame:CGRectMake(10, 10, 300, 27)];
+        [errorLabel setStringValue:@"Error: more than one winner indicated"];
+        [errorLabel setTextColor:[NSColor redColor]];
+        [errorLabel setBezeled:NO];
+        [errorLabel setDrawsBackground:NO];
+        [errorLabel setEditable:NO];
+        [errorLabel setSelectable:NO];
+        [self.window.contentView addSubview:errorLabel];
+        }
+        
+    }
+    else {     
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"submitScores"
+                                                            object:nil];        
+        [self.window close];
+        self = nil;
+        
+        
+    }
+    submitButtonCount++;
 }
 
 @end

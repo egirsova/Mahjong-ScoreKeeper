@@ -16,7 +16,7 @@
 @property (nonatomic) int roundPoints;
 @property (nonatomic) int roundsWon;
 @property (nonatomic) BOOL roundWinner;
-
+@property (nonatomic) int roundsPlayed;
 - (instancetype)initWithName:(NSString *)n
                         wind:(int)w;
 

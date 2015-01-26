@@ -23,10 +23,25 @@
     IBOutlet NSTextField *southPlayerScoreLabel;
     IBOutlet NSTextField *eastPlayerScoreLabel;
     IBOutlet NSTextField *westPlayerScoreLabel;
+    
+    IBOutlet NSTextView *roundHistory;
+    IBOutlet NSTextField *roundCountLabel;
 }
 
 @property (nonatomic) NSMutableArray *playerArray;
 
 - (id)initWithWindowNibName:(NSString *)windowNibName playerArray:(NSMutableArray *)array;
+
+- (IBAction)addScoresButton:(id)sender;
+- (void)updateHistory;
+- (void)appendToTextView:(NSString *)text;
+- (void)updatePlayerScores;
+- (void)updateAllNecessaryItems;
+- (void)initializeLabels;
+- (void)setWindLabels;
+- (void)updatePlayerWinds;
+- (void)updateRoundCount;
+- (NSString *)convertWindToString:(int)wind;
+- (void)updateScoreLabels;
 
 @end

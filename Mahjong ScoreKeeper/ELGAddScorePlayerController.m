@@ -6,15 +6,15 @@
 //  Copyright (c) 2015 Girsova. All rights reserved.
 //
 
-#import "ELGAddScorePlayerOneController.h"
+#import "ELGAddScorePlayerController.h"
 #import "ELGDefinitions.h"
 #import "ELGPlayer.h"
 
-@interface ELGAddScorePlayerOneController ()
+@interface ELGAddScorePlayerController ()
 
 @end
 
-@implementation ELGAddScorePlayerOneController
+@implementation ELGAddScorePlayerController
 @synthesize playerArray;
 @synthesize playerInt;
 
@@ -249,9 +249,9 @@
     + (CKDragonCount * CK_DRAGON)
     + (CKWindCount * CK_WIND);
     
-    ELGPlayer *player = playerArray[playerInt];
-    BOOL winner = [winnerOfRound isEnabled];
-    [player setRoundWinner:winner];
+    BOOL winner = [winnerOfRound state] == NSOnState;
+    [playerArray[playerInt] setRoundWinner:winner];
+    
     if ([winnerOfRound state] == NSOnState) {
         tempRoundPoints = tempRoundPoints + 10;
     }
@@ -301,8 +301,8 @@
         tempRoundPoints = 300;
     }
     
-    player.roundPoints = tempRoundPoints;
-    [playerArray replaceObjectAtIndex:playerInt withObject:player];
+    [playerArray[playerInt] setRoundPoints:tempRoundPoints];
+    
 }
 
 @end

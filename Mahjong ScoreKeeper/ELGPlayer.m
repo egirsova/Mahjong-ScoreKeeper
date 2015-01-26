@@ -10,6 +10,7 @@
 
 @implementation ELGPlayer
 @synthesize roundWinner;
+@synthesize roundsPlayed;
 
 - (instancetype)initWithName:(NSString *)n wind:(int)w
 {
@@ -23,6 +24,8 @@
         
         // Set the player wind
         _wind = w;
+        
+        roundsPlayed = 1;
     }
     return self;
 }
