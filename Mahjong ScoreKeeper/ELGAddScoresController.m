@@ -43,12 +43,12 @@
     [super windowDidLoad];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-    
     [self updateNameLabels];
     int rounds = [playerArray[0] roundsPlayed];
     NSString *roundLabel = [NSString stringWithFormat:@"Round %d Scores", rounds];
     [roundCountLabel setStringValue:roundLabel];
     submitButtonCount = 0;
+    
 }
 
 - (void)awakeFromNib
@@ -147,17 +147,15 @@
         [errorLabel setSelectable:NO];
         [self.window.contentView addSubview:errorLabel];
         }
-        
     }
     else {     
         [[NSNotificationCenter defaultCenter] postNotificationName:@"submitScores"
                                                             object:nil];        
         [self.window close];
-        self = nil;
-        
         
     }
     submitButtonCount++;
+    
 }
 
 @end

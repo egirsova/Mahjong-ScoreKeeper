@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E3D12B11A76D97900535663 /* mahjong_tile.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9E3D12B01A76D97900535663 /* mahjong_tile.icns */; };
+		9E3D12B31A76D98100535663 /* mahjong_tile.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9E3D12B21A76D98100535663 /* mahjong_tile.icns */; };
 		9EE9C0E11A7569C9005724AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE9C0E01A7569C9005724AD /* Cocoa.framework */; };
 		9EE9C0EB1A7569C9005724AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9C0E91A7569C9005724AD /* InfoPlist.strings */; };
 		9EE9C0ED1A7569C9005724AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9C0EC1A7569C9005724AD /* main.m */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E3D12B01A76D97900535663 /* mahjong_tile.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = mahjong_tile.icns; sourceTree = "<group>"; };
+		9E3D12B21A76D98100535663 /* mahjong_tile.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = mahjong_tile.icns; sourceTree = "<group>"; };
 		9EE9C0DD1A7569C9005724AD /* Mahjong ScoreKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mahjong ScoreKeeper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE9C0E01A7569C9005724AD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9EE9C0E31A7569C9005724AD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -75,6 +79,7 @@
 		9EE9C0D41A7569C9005724AD = {
 			isa = PBXGroup;
 			children = (
+				9E3D12B21A76D98100535663 /* mahjong_tile.icns */,
 				9EE9C0E61A7569C9005724AD /* Mahjong ScoreKeeper */,
 				9EE9C0DF1A7569C9005724AD /* Frameworks */,
 				9EE9C0DE1A7569C9005724AD /* Products */,
@@ -142,6 +147,7 @@
 				9EE9C0E81A7569C9005724AD /* Mahjong ScoreKeeper-Info.plist */,
 				9EE9C0E91A7569C9005724AD /* InfoPlist.strings */,
 				9EE9C1111A757732005724AD /* compass-md.png */,
+				9E3D12B01A76D97900535663 /* mahjong_tile.icns */,
 				9EE9C0EC1A7569C9005724AD /* main.m */,
 				9EE9C0EE1A7569C9005724AD /* Mahjong ScoreKeeper-Prefix.pch */,
 				9EE9C0EF1A7569C9005724AD /* Credits.rtf */,
@@ -209,6 +215,8 @@
 				9EE9C1121A757732005724AD /* compass-md.png in Resources */,
 				9EE9C1171A757EC9005724AD /* ELGAddScoresController.xib in Resources */,
 				9EE9C11C1A75A2EE005724AD /* ELGAddScorePlayerController.xib in Resources */,
+				9E3D12B11A76D97900535663 /* mahjong_tile.icns in Resources */,
+				9E3D12B31A76D98100535663 /* mahjong_tile.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +370,7 @@
 				9EE9C0FC1A7569C9005724AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

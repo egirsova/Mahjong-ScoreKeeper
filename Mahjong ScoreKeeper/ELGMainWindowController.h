@@ -26,6 +26,8 @@
     
     IBOutlet NSTextView *roundHistory;
     IBOutlet NSTextField *roundCountLabel;
+    
+    IBOutlet NSImageView *compass;
 }
 
 @property (nonatomic) NSMutableArray *playerArray;
@@ -43,5 +45,7 @@
 - (void)updateRoundCount;
 - (NSString *)convertWindToString:(int)wind;
 - (void)updateScoreLabels;
+- (void)closeAddScoresController;
+- (void)rotateCompass;
 
 @end

@@ -51,7 +51,7 @@
 }
 
 - (void)awakeFromNib
-{
+{    
     // Listens to notifications
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateAllNecessaryItems)
@@ -76,6 +76,7 @@
             playerInfo = [NSString stringWithFormat:@"%@ \t\t %@ \t\t %d \t\t %d\n", [playerArray[i] name], wind, [playerArray[i] roundPoints], [playerArray[i] totalPoints]];
         }
         [self appendToTextView:playerInfo];
+        [self appendToTextView:@"\n"];
     }
 }
 
@@ -109,16 +110,16 @@
     [self updatePlayerScores];
     [self updatePlayerWinds];
     
+    // Update Round History TextView
+    [self updateHistory];
+    
+    [self updateRoundCount];
+    
     // Update Labels
     [self setWindLabels];
     [self updateScoreLabels];
     NSString *roundStr = [NSString stringWithFormat:@"Round %d", [playerArray[0] roundsPlayed]];
     [roundCountLabel setStringValue:roundStr];
-    
-    // Update Round History TextView
-    [self updateHistory];
-    
-    [self updateRoundCount];
     
     // Set All roundWinners to FALSE
     for (int i = 0; i < 4; i++)
@@ -132,6 +133,9 @@
     {
         [playerArray[i] setRoundPoints:0];
     }
+    
+    [self rotateCompass];
+    
 }
 
 - (void)setWindLabels
@@ -239,13 +243,25 @@
     }
 }
 
+- (void)rotateCompass
+{
+    [compass rotateByAngle:(90)];
+}
+
+- (void)closeAddScoresController
+{
+    addScoresController = nil;
+}
+
 #pragma mark - Action Methods
 - (IBAction)addScoresButton:(id)sender
 {
+    // Makes sure to instantiate a new addScoresController each time
+    if(addScoresController){
+        [self closeAddScoresController];
+    }
     if(!addScoresController){
-        NSLog(@"I go here");
         addScoresController = [[ELGAddScoresController alloc] initWithWindowNibName:@"ELGAddScoresController" playerArray:playerArray];
-        //[addScoresController setDelegate:self]
     }
     [addScoresController showWindow:self];
     
