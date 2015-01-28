@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9E3D12B11A76D97900535663 /* mahjong_tile.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9E3D12B01A76D97900535663 /* mahjong_tile.icns */; };
 		9E3D12B31A76D98100535663 /* mahjong_tile.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9E3D12B21A76D98100535663 /* mahjong_tile.icns */; };
+		9EAAF5AA1A76E0E900F15A4E /* ELGEndGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAAF5A81A76E0E900F15A4E /* ELGEndGameController.m */; };
+		9EAAF5AB1A76E0E900F15A4E /* ELGEndGameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EAAF5A91A76E0E900F15A4E /* ELGEndGameController.xib */; };
 		9EE9C0E11A7569C9005724AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE9C0E01A7569C9005724AD /* Cocoa.framework */; };
 		9EE9C0EB1A7569C9005724AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9C0E91A7569C9005724AD /* InfoPlist.strings */; };
 		9EE9C0ED1A7569C9005724AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9C0EC1A7569C9005724AD /* main.m */; };
@@ -31,6 +33,9 @@
 /* Begin PBXFileReference section */
 		9E3D12B01A76D97900535663 /* mahjong_tile.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = mahjong_tile.icns; sourceTree = "<group>"; };
 		9E3D12B21A76D98100535663 /* mahjong_tile.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = mahjong_tile.icns; sourceTree = "<group>"; };
+		9EAAF5A71A76E0E900F15A4E /* ELGEndGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELGEndGameController.h; sourceTree = "<group>"; };
+		9EAAF5A81A76E0E900F15A4E /* ELGEndGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELGEndGameController.m; sourceTree = "<group>"; };
+		9EAAF5A91A76E0E900F15A4E /* ELGEndGameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELGEndGameController.xib; sourceTree = "<group>"; };
 		9EE9C0DD1A7569C9005724AD /* Mahjong ScoreKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mahjong ScoreKeeper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE9C0E01A7569C9005724AD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9EE9C0E31A7569C9005724AD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -116,6 +121,9 @@
 		9EE9C0E61A7569C9005724AD /* Mahjong ScoreKeeper */ = {
 			isa = PBXGroup;
 			children = (
+				9EAAF5A71A76E0E900F15A4E /* ELGEndGameController.h */,
+				9EAAF5A81A76E0E900F15A4E /* ELGEndGameController.m */,
+				9EAAF5A91A76E0E900F15A4E /* ELGEndGameController.xib */,
 				9EE9C1181A75A2ED005724AD /* ELGAddScorePlayerController.h */,
 				9EE9C1191A75A2ED005724AD /* ELGAddScorePlayerController.m */,
 				9EE9C11A1A75A2ED005724AD /* ELGAddScorePlayerController.xib */,
@@ -217,6 +225,7 @@
 				9EE9C11C1A75A2EE005724AD /* ELGAddScorePlayerController.xib in Resources */,
 				9E3D12B11A76D97900535663 /* mahjong_tile.icns in Resources */,
 				9E3D12B31A76D98100535663 /* mahjong_tile.icns in Resources */,
+				9EAAF5AB1A76E0E900F15A4E /* ELGEndGameController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +244,7 @@
 				9EE9C10F1A7575B8005724AD /* ELGMainWindowController.m in Sources */,
 				9EE9C1161A757EC9005724AD /* ELGAddScoresController.m in Sources */,
 				9EE9C11B1A75A2EE005724AD /* ELGAddScorePlayerController.m in Sources */,
+				9EAAF5AA1A76E0E900F15A4E /* ELGEndGameController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

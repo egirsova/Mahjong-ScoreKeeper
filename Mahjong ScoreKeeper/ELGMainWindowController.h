@@ -8,11 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 @class ELGAddScoresController;
+@class ELGEndGameController;
 
 @interface ELGMainWindowController : NSWindowController
 
 {    
     ELGAddScoresController *addScoresController;
+    ELGEndGameController *endGameController;
     
     IBOutlet NSTextField *northPlayerNameLabel;
     IBOutlet NSTextField *southPlayerNameLabel;
@@ -34,7 +36,6 @@
 
 - (id)initWithWindowNibName:(NSString *)windowNibName playerArray:(NSMutableArray *)array;
 
-- (IBAction)addScoresButton:(id)sender;
 - (void)updateHistory;
 - (void)appendToTextView:(NSString *)text;
 - (void)updatePlayerScores;
@@ -47,5 +48,8 @@
 - (void)updateScoreLabels;
 - (void)closeAddScoresController;
 - (void)rotateCompass;
+
+- (IBAction)addScoresButton:(id)sender;
+- (IBAction)endGameButton:(id)sender;
 
 @end

@@ -254,6 +254,9 @@
     
     if ([winnerOfRound state] == NSOnState) {
         tempRoundPoints = tempRoundPoints + 10;
+        int roundsWon = [playerArray[playerInt] roundsWon];
+        roundsWon++;
+        [playerArray[playerInt] setRoundsWon:roundsWon];
     }
     if ([zeroPoints state] == NSOnState) {
         tempRoundPoints = 20;

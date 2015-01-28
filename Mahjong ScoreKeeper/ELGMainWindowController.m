@@ -10,6 +10,7 @@
 #import "ELGDefinitions.h"
 #import "ELGPlayer.h"
 #import "ELGAddScoresController.h"
+#import "ELGEndGameController.h"
 
 @interface ELGMainWindowController ()
 
@@ -265,6 +266,14 @@
     }
     [addScoresController showWindow:self];
     
+}
+
+- (IBAction)endGameButton:(id)sender
+{
+    if(!endGameController){
+        endGameController = [[ELGEndGameController alloc] initWithWindowNibName:@"ELGEndGameController" playerArray:playerArray];
+    }
+    [endGameController showWindow:self];
 }
 
 
