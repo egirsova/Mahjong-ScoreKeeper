@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ELGPlayer : NSObject
+@interface ELGPlayer : NSObject <NSCopying>
 
 @property (nonatomic) NSString* name;
 @property (nonatomic) int wind;

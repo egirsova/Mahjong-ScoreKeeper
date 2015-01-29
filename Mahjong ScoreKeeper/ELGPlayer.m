@@ -41,4 +41,20 @@
     return [NSString stringWithFormat:@"<%@: %d wind>", self.name, self.wind];
 }
 
+#pragma mark - NSCopying Methods
+-(id)copyWithZone:(NSZone *)zone
+{
+    // We'll ignore the zone for now
+    ELGPlayer *player = [[[self class] allocWithZone:zone] init];
+    player.name = self.name;
+    player.wind = self.wind;
+    player.totalPoints = self.totalPoints;
+    player.roundPoints = self.roundPoints;
+    player.roundsWon = self.roundsWon;
+    player.roundWinner = self.roundWinner;
+    player.roundsPlayed = self.roundsPlayed;
+    
+    return player;
+}
+
 @end

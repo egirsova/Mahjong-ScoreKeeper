@@ -9,8 +9,9 @@
 #import <Cocoa/Cocoa.h>
 @class ELGAddScoresController;
 @class ELGEndGameController;
+@class ELGPlayer;
 
-@interface ELGMainWindowController : NSWindowController
+@interface ELGMainWindowController : NSWindowController <NSTableViewDataSource>
 
 {    
     ELGAddScoresController *addScoresController;
@@ -26,18 +27,19 @@
     IBOutlet NSTextField *eastPlayerScoreLabel;
     IBOutlet NSTextField *westPlayerScoreLabel;
     
-    IBOutlet NSTextView *roundHistory;
+    IBOutlet NSTableView *roundHistory;
     IBOutlet NSTextField *roundCountLabel;
     
     IBOutlet NSImageView *compass;
+    
 }
 
 @property (nonatomic) NSMutableArray *playerArray;
+@property (nonatomic) NSMutableArray *scoresList;
 
 - (id)initWithWindowNibName:(NSString *)windowNibName playerArray:(NSMutableArray *)array;
 
 - (void)updateHistory;
-- (void)appendToTextView:(NSString *)text;
 - (void)updatePlayerScores;
 - (void)updateAllNecessaryItems;
 - (void)initializeLabels;
