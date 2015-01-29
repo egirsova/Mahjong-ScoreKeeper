@@ -30,7 +30,7 @@
     IBOutlet NSTableView *roundHistory;
     IBOutlet NSTextField *roundCountLabel;
     
-    IBOutlet NSImageView *compass;
+    IBOutlet NSImageView *_compass;
     
 }
 

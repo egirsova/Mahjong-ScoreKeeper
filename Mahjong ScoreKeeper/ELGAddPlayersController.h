@@ -25,6 +25,8 @@
     IBOutlet NSPopUpButton *playerFourWindPU;
     
     int startGameButtonCount;
+    
+    NSImageView *_compass;
 }
 
 @property (nonatomic) NSMutableArray *playerArray;

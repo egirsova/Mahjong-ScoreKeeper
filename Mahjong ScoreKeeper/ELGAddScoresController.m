@@ -80,7 +80,7 @@
     [playerFourScoreLabel setStringValue:[@(player.roundPoints) stringValue]];
 }
 
-- (BOOL)checkWinnerDuplicates
+- (int)winnerCount
 {
     int winnersCount = 0;
     for(int i = 0; i < 4; i++)
@@ -89,10 +89,7 @@
             winnersCount++;
         }
     }
-    if(winnersCount > 1)
-        return true;
-    else
-        return false;
+    return winnersCount;
 }
 
 - (IBAction)playerOneCalculate:(id)sender
@@ -134,7 +131,7 @@
 - (IBAction)submitButton:(id)sender
 {
     // Check if more than one player has "winner" checked
-    if([self checkWinnerDuplicates]){
+    if([self winnerCount] > 1){
         
         // Initializes errorLabel if it has not been initialized yet
         if(submitButtonCount == 0){
@@ -148,7 +145,24 @@
         [self.window.contentView addSubview:errorLabel];
         }
     }
-    else {     
+    if([self winnerCount] < 1){
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:@"No winners selected.\nAre you sure you want to continue?"];
+        [alert addButtonWithTitle:@"Continue"];
+        [alert addButtonWithTitle:@"Cancel"];
+        [alert setAlertStyle:NSWarningAlertStyle];
+        
+        if ([alert runModal] == NSAlertFirstButtonReturn) {
+            // Continue button clicked
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"submitScores"
+                                                                object:nil];
+            [self.window close];
+        } else {
+            // Cancel button clicked.
+            return;
+        }    }
+    else {
+               
         [[NSNotificationCenter defaultCenter] postNotificationName:@"submitScores"
                                                             object:nil];        
         [self.window close];

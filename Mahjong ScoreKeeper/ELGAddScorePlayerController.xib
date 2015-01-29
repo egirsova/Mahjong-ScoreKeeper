@@ -43,9 +43,9 @@
 				<string key="NSClassName">NSApplication</string>
 			</object>
 			<object class="NSWindowTemplate" id="1005">
-				<int key="NSWindowStyleMask">15</int>
+				<int key="NSWindowStyleMask">3</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{348, 144}, {618, 685}}</string>
+				<string key="NSWindowRect">{{365, 93}, {618, 685}}</string>
 				<int key="NSWTFlags">544735232</int>
 				<string key="NSWindowTitle">Player 1 Add Scores</string>
 				<string key="NSWindowClass">NSWindow</string>

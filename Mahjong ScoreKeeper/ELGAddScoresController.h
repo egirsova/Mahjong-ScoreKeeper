@@ -43,6 +43,6 @@
 
 - (void)updateNameLabels;
 - (void)updateScoreLabels;
-- (BOOL)checkWinnerDuplicates;
+- (int)winnerCount;
 
 @end

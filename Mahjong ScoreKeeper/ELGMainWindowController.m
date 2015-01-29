@@ -129,7 +129,8 @@
         [playerArray[i] setRoundPoints:0];
     }
     
-    [self rotateCompass];
+    // Cannot get rotation to work
+    // [self rotateCompass];
     
 }
 
@@ -238,14 +239,32 @@
     }
 }
 
-- (void)rotateCompass
-{
-    [compass rotateByAngle:(90)];
-}
-
 - (void)closeAddScoresController
 {
     addScoresController = nil;
+}
+
+- (void)rotateCompass
+{
+    [NSAnimationContext beginGrouping];
+    [[NSAnimationContext currentContext] setDuration:0.5];
+    
+    double rotateDeg = 90;
+    NSAffineTransform *rotate = [[NSAffineTransform alloc] init];
+    NSGraphicsContext *context = [NSGraphicsContext currentContext];
+    [context saveGraphicsState];
+    [rotate rotateByDegrees:rotateDeg];
+    [rotate concat];
+    
+    CGRect frame = _compass.layer.frame;
+    CGPoint center = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
+    _compass.layer.position = center;
+    _compass.layer.anchorPoint = CGPointMake(0.5, 0.5);
+    [[_compass animator] setFrameCenterRotation:90];
+    
+    [context restoreGraphicsState];
+    
+    
 }
 
 #pragma mark - Action Methods
