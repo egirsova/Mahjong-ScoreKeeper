@@ -36,6 +36,9 @@
     if (self) {
         self.playerArray = array;
         self.playerInt = player;
+        
+        // Initializes prefs so it can read values from it
+        prefs = [NSUserDefaults standardUserDefaults];
     }
     
     return self;
@@ -232,34 +235,34 @@
     NSInteger CKWindCount = [[[cKWind selectedItem] title] integerValue];
     NSInteger CKDragonCount = [[[cKDragon selectedItem] title] integerValue];
     tempRoundPoints
-    = (OPRegularCount * OP_REGULAR)
-    + (OPOneOrNineCount * OP_ONEORNINE)
-    + (OPDragonCount * OP_DRAGON)
-    + (OPWindCount * OP_WIND)
-    + (OKRegularCount * OK_REGULAR)
-    + (OKOneOrNineCount * OK_ONEORNINE)
-    + (OKDragonCount * OK_DRAGON)
-    + (OKWindCount * OK_WIND)
-    + (CPRegularCount * CP_REGULAR)
-    + (CPOneOrNineCount * CP_ONEORNINE)
-    + (CPDragonCount * CP_DRAGON)
-    + (CPWindCount * CP_WIND)
-    + (CKRegularCount * CK_REGULAR)
-    + (CKOneOrNineCount * CK_ONEORNINE)
-    + (CKDragonCount * CK_DRAGON)
-    + (CKWindCount * CK_WIND);
+    = (OPRegularCount * [[prefs stringForKey:@"openPongRegular"] intValue])
+    + (OPOneOrNineCount * [[prefs stringForKey:@"openPongOneOrNine"] intValue])
+    + (OPDragonCount * [[prefs stringForKey:@"openPongDragon"] intValue])
+    + (OPWindCount * [[prefs stringForKey:@"openPongWind"] intValue])
+    + (OKRegularCount * [[prefs stringForKey:@"openKongRegular"] intValue])
+    + (OKOneOrNineCount * [[prefs stringForKey:@"openKongOneOrNine"] intValue])
+    + (OKDragonCount * [[prefs stringForKey:@"openKongDragon"] intValue])
+    + (OKWindCount * [[prefs stringForKey:@"openKongWind"] intValue])
+    + (CPRegularCount * [[prefs stringForKey:@"closedPongRegular"] intValue])
+    + (CPOneOrNineCount * [[prefs stringForKey:@"closedPongOneOrNine"] intValue])
+    + (CPDragonCount * [[prefs stringForKey:@"closedPongDragon"] intValue])
+    + (CPWindCount * [[prefs stringForKey:@"closedPongWind"] intValue])
+    + (CKRegularCount * [[prefs stringForKey:@"closedKongRegular"] intValue])
+    + (CKOneOrNineCount * [[prefs stringForKey:@"closedKongOneOrNine"] intValue])
+    + (CKDragonCount * [[prefs stringForKey:@"closedKongDragon"] intValue])
+    + (CKWindCount * [[prefs stringForKey:@"closedKongWind"] intValue]);
     
     BOOL winner = [winnerOfRound state] == NSOnState;
     [playerArray[playerInt] setRoundWinner:winner];
     
     if ([winnerOfRound state] == NSOnState) {
-        tempRoundPoints = tempRoundPoints + 10;
+        tempRoundPoints = tempRoundPoints + [[prefs stringForKey:@"winner"] intValue];
         int roundsWon = [playerArray[playerInt] roundsWon];
         roundsWon++;
         [playerArray[playerInt] setRoundsWon:roundsWon];
     }
     if ([zeroPoints state] == NSOnState) {
-        tempRoundPoints = 20;
+        tempRoundPoints = [[prefs stringForKey:@"winnerZeroPoints"] intValue];
     }
     if ([drawThemselves state] == NSOnState) {
         tempRoundPoints = tempRoundPoints + 2;
@@ -268,40 +271,69 @@
         tempRoundPoints = tempRoundPoints + 2;
     }
     NSInteger flowerCount = [[[flowers selectedItem] title] integerValue];
-    tempRoundPoints = tempRoundPoints + (flowerCount * FLOWER);
+    tempRoundPoints = tempRoundPoints + (flowerCount * [[prefs stringForKey:@"flower"] intValue]);
     NSInteger dragonWindPairCount = [[[dWPair selectedItem] title] integerValue];
     tempRoundPoints = tempRoundPoints + (dragonWindPairCount * DWPAIR);
     NSInteger ownFlowerCount = [[[ownFlowers selectedItem] title] integerValue];
-    if (ownFlowerCount > 0) {
-        tempRoundPoints = tempRoundPoints * (ownFlowerCount * OWNFLOWER);
+    
+    if([prefs boolForKey:@"doublePointsOwnFlower"]){
+        if (ownFlowerCount > 0) {
+            tempRoundPoints = tempRoundPoints * (ownFlowerCount * OWNFLOWER);
+        }
     }
+    
     NSInteger pkDragonCount = [[[pKDragon selectedItem] title] integerValue];
     if (pkDragonCount > 0) {
         tempRoundPoints = tempRoundPoints * (pkDragonCount * PKDRAGON);
     }
+    
     if ([pKOwnWind state] == NSOnState) {
         tempRoundPoints = tempRoundPoints * 2;
     }
+    
     if ([groupAndDW state] == NSOnState) {
         tempRoundPoints = tempRoundPoints * 2;
     }
+    
     if ([noStraights state] == NSOnState) {
         tempRoundPoints = tempRoundPoints * 2;
     }
+    
     if ([singleGroup state] == NSOnState) {
         tempRoundPoints = tempRoundPoints * 6;
     }
+    
     if ([fromDeadWall state] == NSOnState) {
         tempRoundPoints = tempRoundPoints * 2;
     }
+    
     if ([lastPossiblePiece state] == NSOnState) {
         tempRoundPoints = tempRoundPoints * 2;
     }
+    
     if ([firstCardFromWall state] == NSOnState) {
         tempRoundPoints = 300;
     }
+    
     if ([firstDiscardedPiece state] == NSOnState) {
         tempRoundPoints = 300;
+    }
+    
+    if([playerArray[playerInt] wind] == EAST){
+        if([prefs boolForKey:@"doublePointsWinEast"]){
+            if([winnerOfRound state] == NSOnState){
+                tempRoundPoints = tempRoundPoints*2;
+            } else{
+                tempRoundPoints = tempRoundPoints/2;
+            }
+        }
+    }
+    
+    if([prefs boolForKey:@"limitMaxPoints"]){
+        int limit = [[prefs stringForKey:@"limit"] intValue];
+        if(tempRoundPoints >= limit){
+            tempRoundPoints = limit;
+        }
     }
     
     [playerArray[playerInt] setRoundPoints:tempRoundPoints];

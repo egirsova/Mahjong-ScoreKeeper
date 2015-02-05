@@ -53,6 +53,8 @@
     IBOutlet NSButton *onlyWinningPiece;
     IBOutlet NSButton *firstCardFromWall;
     IBOutlet NSButton *firstDiscardedPiece;
+    
+    NSUserDefaults *prefs;
 }
 @property (nonatomic) NSMutableArray *playerArray;
 @property (nonatomic) int playerInt;

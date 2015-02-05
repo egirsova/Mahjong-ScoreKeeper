@@ -29,6 +29,8 @@
     
     IBOutlet NSTextField *roundCountLabel;
     int submitButtonCount;
+    
+    IBOutlet NSTextField *errorLabel;
 }
 
 @property (nonatomic) NSMutableArray *playerArray;

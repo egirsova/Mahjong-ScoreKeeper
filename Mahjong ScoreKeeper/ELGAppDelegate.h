@@ -8,12 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 @class ELGAppController;
+@class ELGPreferencePaneController;
 
 @interface ELGAppDelegate : NSObject <NSApplicationDelegate>
 {
     ELGAppController *appController;
+    ELGPreferencePaneController *preferencePaneController;
 }
 
 @property (assign) IBOutlet NSWindow *window;
+
+- (IBAction)openPreferences:(id)sender;
+- (void)initializePreferences;
 
 @end

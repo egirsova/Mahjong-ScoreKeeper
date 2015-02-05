@@ -28,6 +28,8 @@
 		9EE9C1171A757EC9005724AD /* ELGAddScoresController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9C1151A757EC9005724AD /* ELGAddScoresController.xib */; };
 		9EE9C11B1A75A2EE005724AD /* ELGAddScorePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9C1191A75A2ED005724AD /* ELGAddScorePlayerController.m */; };
 		9EE9C11C1A75A2EE005724AD /* ELGAddScorePlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9C11A1A75A2ED005724AD /* ELGAddScorePlayerController.xib */; };
+		9EF6564B1A7C844E00FB7FC3 /* ELGPreferencePaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF656491A7C844E00FB7FC3 /* ELGPreferencePaneController.m */; };
+		9EF6564C1A7C844E00FB7FC3 /* ELGPreferencePaneController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EF6564A1A7C844E00FB7FC3 /* ELGPreferencePaneController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,9 @@
 		9EE9C1181A75A2ED005724AD /* ELGAddScorePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELGAddScorePlayerController.h; sourceTree = "<group>"; };
 		9EE9C1191A75A2ED005724AD /* ELGAddScorePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELGAddScorePlayerController.m; sourceTree = "<group>"; };
 		9EE9C11A1A75A2ED005724AD /* ELGAddScorePlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELGAddScorePlayerController.xib; sourceTree = "<group>"; };
+		9EF656481A7C844E00FB7FC3 /* ELGPreferencePaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELGPreferencePaneController.h; sourceTree = "<group>"; };
+		9EF656491A7C844E00FB7FC3 /* ELGPreferencePaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELGPreferencePaneController.m; sourceTree = "<group>"; };
+		9EF6564A1A7C844E00FB7FC3 /* ELGPreferencePaneController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELGPreferencePaneController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +146,9 @@
 				9EE9C0F21A7569C9005724AD /* ELGAppDelegate.h */,
 				9EE9C0F31A7569C9005724AD /* ELGAppDelegate.m */,
 				9EE9C0F51A7569C9005724AD /* MainMenu.xib */,
+				9EF656481A7C844E00FB7FC3 /* ELGPreferencePaneController.h */,
+				9EF656491A7C844E00FB7FC3 /* ELGPreferencePaneController.m */,
+				9EF6564A1A7C844E00FB7FC3 /* ELGPreferencePaneController.xib */,
 				9EE9C1091A7572B3005724AD /* ELGDefinitions.h */,
 				9EE9C1051A757187005724AD /* ELGPlayer.h */,
 				9EE9C1061A757187005724AD /* ELGPlayer.m */,
@@ -226,6 +234,7 @@
 				9E3D12B11A76D97900535663 /* mahjong_tile.icns in Resources */,
 				9E3D12B31A76D98100535663 /* mahjong_tile.icns in Resources */,
 				9EAAF5AB1A76E0E900F15A4E /* ELGEndGameController.xib in Resources */,
+				9EF6564C1A7C844E00FB7FC3 /* ELGPreferencePaneController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +254,7 @@
 				9EE9C1161A757EC9005724AD /* ELGAddScoresController.m in Sources */,
 				9EE9C11B1A75A2EE005724AD /* ELGAddScorePlayerController.m in Sources */,
 				9EAAF5AA1A76E0E900F15A4E /* ELGEndGameController.m in Sources */,
+				9EF6564B1A7C844E00FB7FC3 /* ELGPreferencePaneController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

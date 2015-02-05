@@ -27,7 +27,6 @@
     if (self) {
         // Initialization code here.
     }
-    
     return self;
 }
 

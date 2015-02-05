@@ -39,6 +39,11 @@
 #define OWNFLOWER           2
 #define DWPAIR              2
 #define PKDRAGON            2
+
+#define WINNER              10
+#define WINNER_ZEROPOINTS   20
+
+#define LIMIT               300
 /******************************************************************/
 
 

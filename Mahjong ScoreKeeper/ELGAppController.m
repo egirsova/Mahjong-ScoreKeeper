@@ -28,6 +28,7 @@
     if(!addPlayersController){
         addPlayersController = [[ELGAddPlayersController alloc] initWithWindowNibName:@"ELGAddPlayersController"];
     }
+    [addPlayersController.window center];
     [addPlayersController showWindow:self];
 }
 
