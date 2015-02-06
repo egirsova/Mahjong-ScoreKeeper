@@ -34,7 +34,6 @@
 #define CK_ONEORNINE        32
 #define CK_WIND             32
 #define CK_DRAGON           32
-#define PAIR_DRAGONORWIND   2
 #define FLOWER              4
 #define OWNFLOWER           2
 #define DWPAIR              2

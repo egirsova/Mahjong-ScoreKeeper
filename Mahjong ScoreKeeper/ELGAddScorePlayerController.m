@@ -276,12 +276,6 @@
     tempRoundPoints = tempRoundPoints + (dragonWindPairCount * DWPAIR);
     NSInteger ownFlowerCount = [[[ownFlowers selectedItem] title] integerValue];
     
-    if([prefs boolForKey:@"doublePointsOwnFlower"]){
-        if (ownFlowerCount > 0) {
-            tempRoundPoints = tempRoundPoints * (ownFlowerCount * OWNFLOWER);
-        }
-    }
-    
     NSInteger pkDragonCount = [[[pKDragon selectedItem] title] integerValue];
     if (pkDragonCount > 0) {
         tempRoundPoints = tempRoundPoints * (pkDragonCount * PKDRAGON);

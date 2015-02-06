@@ -30,6 +30,11 @@
 		9EE9C11C1A75A2EE005724AD /* ELGAddScorePlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9C11A1A75A2ED005724AD /* ELGAddScorePlayerController.xib */; };
 		9EF6564B1A7C844E00FB7FC3 /* ELGPreferencePaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF656491A7C844E00FB7FC3 /* ELGPreferencePaneController.m */; };
 		9EF6564C1A7C844E00FB7FC3 /* ELGPreferencePaneController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EF6564A1A7C844E00FB7FC3 /* ELGPreferencePaneController.xib */; };
+		9EFEFD061A847DEB006327E6 /* ELGSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFEFD041A847DEB006327E6 /* ELGSettingsViewController.m */; };
+		9EFEFD071A847DEB006327E6 /* ELGSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEFD051A847DEB006327E6 /* ELGSettingsViewController.xib */; };
+		9EFEFD0B1A848996006327E6 /* ELGDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFEFD091A848996006327E6 /* ELGDescriptionViewController.m */; };
+		9EFEFD0C1A848996006327E6 /* ELGDescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEFD0A1A848996006327E6 /* ELGDescriptionViewController.xib */; };
+		9EFEFD0E1A849128006327E6 /* description.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9EFEFD0D1A849128006327E6 /* description.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +77,13 @@
 		9EF656481A7C844E00FB7FC3 /* ELGPreferencePaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELGPreferencePaneController.h; sourceTree = "<group>"; };
 		9EF656491A7C844E00FB7FC3 /* ELGPreferencePaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELGPreferencePaneController.m; sourceTree = "<group>"; };
 		9EF6564A1A7C844E00FB7FC3 /* ELGPreferencePaneController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELGPreferencePaneController.xib; sourceTree = "<group>"; };
+		9EFEFD031A847DEB006327E6 /* ELGSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELGSettingsViewController.h; sourceTree = "<group>"; };
+		9EFEFD041A847DEB006327E6 /* ELGSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELGSettingsViewController.m; sourceTree = "<group>"; };
+		9EFEFD051A847DEB006327E6 /* ELGSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELGSettingsViewController.xib; sourceTree = "<group>"; };
+		9EFEFD081A848996006327E6 /* ELGDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELGDescriptionViewController.h; sourceTree = "<group>"; };
+		9EFEFD091A848996006327E6 /* ELGDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELGDescriptionViewController.m; sourceTree = "<group>"; };
+		9EFEFD0A1A848996006327E6 /* ELGDescriptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELGDescriptionViewController.xib; sourceTree = "<group>"; };
+		9EFEFD0D1A849128006327E6 /* description.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = description.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +161,12 @@
 				9EF656481A7C844E00FB7FC3 /* ELGPreferencePaneController.h */,
 				9EF656491A7C844E00FB7FC3 /* ELGPreferencePaneController.m */,
 				9EF6564A1A7C844E00FB7FC3 /* ELGPreferencePaneController.xib */,
+				9EFEFD081A848996006327E6 /* ELGDescriptionViewController.h */,
+				9EFEFD091A848996006327E6 /* ELGDescriptionViewController.m */,
+				9EFEFD0A1A848996006327E6 /* ELGDescriptionViewController.xib */,
+				9EFEFD031A847DEB006327E6 /* ELGSettingsViewController.h */,
+				9EFEFD041A847DEB006327E6 /* ELGSettingsViewController.m */,
+				9EFEFD051A847DEB006327E6 /* ELGSettingsViewController.xib */,
 				9EE9C1091A7572B3005724AD /* ELGDefinitions.h */,
 				9EE9C1051A757187005724AD /* ELGPlayer.h */,
 				9EE9C1061A757187005724AD /* ELGPlayer.m */,
@@ -160,6 +178,7 @@
 		9EE9C0E71A7569C9005724AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9EFEFD0D1A849128006327E6 /* description.rtf */,
 				9EE9C0E81A7569C9005724AD /* Mahjong ScoreKeeper-Info.plist */,
 				9EE9C0E91A7569C9005724AD /* InfoPlist.strings */,
 				9EE9C1111A757732005724AD /* compass-md.png */,
@@ -235,6 +254,9 @@
 				9E3D12B31A76D98100535663 /* mahjong_tile.icns in Resources */,
 				9EAAF5AB1A76E0E900F15A4E /* ELGEndGameController.xib in Resources */,
 				9EF6564C1A7C844E00FB7FC3 /* ELGPreferencePaneController.xib in Resources */,
+				9EFEFD071A847DEB006327E6 /* ELGSettingsViewController.xib in Resources */,
+				9EFEFD0C1A848996006327E6 /* ELGDescriptionViewController.xib in Resources */,
+				9EFEFD0E1A849128006327E6 /* description.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +277,8 @@
 				9EE9C11B1A75A2EE005724AD /* ELGAddScorePlayerController.m in Sources */,
 				9EAAF5AA1A76E0E900F15A4E /* ELGEndGameController.m in Sources */,
 				9EF6564B1A7C844E00FB7FC3 /* ELGPreferencePaneController.m in Sources */,
+				9EFEFD061A847DEB006327E6 /* ELGSettingsViewController.m in Sources */,
+				9EFEFD0B1A848996006327E6 /* ELGDescriptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

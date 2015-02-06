@@ -7,47 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class ELGSettingsViewController;
+@class ELGDescriptionViewController;
 
 @interface ELGPreferencePaneController : NSWindowController
 {
-    // Open Pong TextField
-    IBOutlet NSTextField *oPRegular;
-    IBOutlet NSTextField *oPOneOrNine;
-    IBOutlet NSTextField *oPWind;
-    IBOutlet NSTextField *oPDragon;
     
-    // Closed Pong TextField
-    IBOutlet NSTextField *cPRegular;
-    IBOutlet NSTextField *cPOneOrNine;
-    IBOutlet NSTextField *cPWind;
-    IBOutlet NSTextField *cPDragon;
-    
-    // Open Kong TextField
-    IBOutlet NSTextField *oKRegular;
-    IBOutlet NSTextField *oKOneOrNine;
-    IBOutlet NSTextField *oKWind;
-    IBOutlet NSTextField *oKDragon;
-    
-    // Closed Kong TextField
-    IBOutlet NSTextField *cKRegular;
-    IBOutlet NSTextField *cKOneOrNine;
-    IBOutlet NSTextField *cKWind;
-    IBOutlet NSTextField *cKDragon;
-    
-    // Additional Points
-    IBOutlet NSTextField *mahjong;
-    IBOutlet NSTextField *zeroPointsMahjong;
-    IBOutlet NSTextField *perFlowers;
-    IBOutlet NSButton *doublePointsEast;
-    IBOutlet NSButton *limitMaxPoints;
-    IBOutlet NSTextField *limit;
-    
-    NSUserDefaults *prefs;
+    ELGSettingsViewController *settingsViewController;
+    ELGDescriptionViewController *descriptionViewController;
     
 }
-
-- (IBAction)limitTurnedOff:(id)sender;
-- (IBAction)submitChangesButton:(id)sender;
-- (IBAction)resetToDefaults:(id)sender;
+@property (nonatomic) IBOutlet NSTabView *tabView;
 
 @end
