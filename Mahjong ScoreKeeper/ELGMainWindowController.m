@@ -27,6 +27,7 @@
     if (self) {
         // Initialization code here.
     }
+    rotation = 90;
     return self;
 }
 
@@ -128,9 +129,6 @@
         [playerArray[i] setRoundPoints:0];
     }
     
-    // Cannot get rotation to work
-    // [self rotateCompass];
-    
 }
 
 - (void)setWindLabels
@@ -227,6 +225,8 @@
                 break;
         }
     }
+    // Rotates compass
+    [self rotateCompass];
 }
 
 - (void)updateRoundCount
@@ -248,7 +248,7 @@
     [NSAnimationContext beginGrouping];
     [[NSAnimationContext currentContext] setDuration:0.5];
     
-    double rotateDeg = 90;
+    double rotateDeg = -rotation;
     NSAffineTransform *rotate = [[NSAffineTransform alloc] init];
     NSGraphicsContext *context = [NSGraphicsContext currentContext];
     [context saveGraphicsState];
@@ -258,11 +258,13 @@
     CGRect frame = _compass.layer.frame;
     CGPoint center = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
     _compass.layer.position = center;
-    _compass.layer.anchorPoint = CGPointMake(0.5, 0.5);
-    [[_compass animator] setFrameCenterRotation:90];
+    //_compass.layer.anchorPoint = CGPointMake(0.5, 0.5);
+    [[_compass animator] setFrameCenterRotation:-rotation];
     
     [context restoreGraphicsState];
     
+    rotation = rotation+90;
+
     
 }
 

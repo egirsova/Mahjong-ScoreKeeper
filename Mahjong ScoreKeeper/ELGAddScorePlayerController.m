@@ -323,6 +323,10 @@
         }
     }
     
+    if(ownFlowerCount > 0) {
+        tempRoundPoints = tempRoundPoints*ownFlowerCount*OWNFLOWER;
+    }
+    
     if([prefs boolForKey:@"limitMaxPoints"]){
         int limit = [[prefs stringForKey:@"limit"] intValue];
         if(tempRoundPoints >= limit){

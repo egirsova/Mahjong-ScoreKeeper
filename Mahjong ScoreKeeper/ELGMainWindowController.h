@@ -32,6 +32,8 @@
     
     IBOutlet NSImageView *_compass;
     
+    int rotation;
+    
 }
 
 @property (nonatomic) NSMutableArray *playerArray;
