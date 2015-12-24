@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8BEB910C-9B4D-4942-B0EB-1BD9F5511ED9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BDAF31BAD9B324A728989C16964B963BABB7A558</key>
+		<string>https://github.com/egirsova/Mahjong-ScoreKeeper.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Mahjong ScoreKeeper.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BDAF31BAD9B324A728989C16964B963BABB7A558</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/egirsova/Mahjong-ScoreKeeper.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BDAF31BAD9B324A728989C16964B963BABB7A558</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BDAF31BAD9B324A728989C16964B963BABB7A558</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Mahjong%20ScoreKeeper</string>
+		</dict>
+	</array>
+</dict>
+</plist>

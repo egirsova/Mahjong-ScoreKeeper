@@ -226,7 +226,7 @@
         }
     }
     // Rotates compass
-    [self rotateCompass];
+    //[self rotateCompass];
 }
 
 - (void)updateRoundCount

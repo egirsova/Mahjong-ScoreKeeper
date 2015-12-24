@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E3D12B11A76D97900535663 /* mahjong_tile.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9E3D12B01A76D97900535663 /* mahjong_tile.icns */; };
-		9E3D12B31A76D98100535663 /* mahjong_tile.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9E3D12B21A76D98100535663 /* mahjong_tile.icns */; };
+		6E88FB2B1C2BC4E100C1E8D5 /* mainIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6E88FB2A1C2BC4E100C1E8D5 /* mainIcon.icns */; };
+		6E88FB3E1C2BCC7E00C1E8D5 /* compassLines.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E88FB361C2BCC7E00C1E8D5 /* compassLines.png */; };
 		9EAAF5AA1A76E0E900F15A4E /* ELGEndGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAAF5A81A76E0E900F15A4E /* ELGEndGameController.m */; };
 		9EAAF5AB1A76E0E900F15A4E /* ELGEndGameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EAAF5A91A76E0E900F15A4E /* ELGEndGameController.xib */; };
 		9EE9C0E11A7569C9005724AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE9C0E01A7569C9005724AD /* Cocoa.framework */; };
@@ -23,7 +23,6 @@
 		9EE9C1071A757187005724AD /* ELGPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9C1061A757187005724AD /* ELGPlayer.m */; };
 		9EE9C10F1A7575B8005724AD /* ELGMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9C10D1A7575B8005724AD /* ELGMainWindowController.m */; };
 		9EE9C1101A7575B8005724AD /* ELGMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9C10E1A7575B8005724AD /* ELGMainWindowController.xib */; };
-		9EE9C1121A757732005724AD /* compass-md.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9C1111A757732005724AD /* compass-md.png */; };
 		9EE9C1161A757EC9005724AD /* ELGAddScoresController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9C1141A757EC9005724AD /* ELGAddScoresController.m */; };
 		9EE9C1171A757EC9005724AD /* ELGAddScoresController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9C1151A757EC9005724AD /* ELGAddScoresController.xib */; };
 		9EE9C11B1A75A2EE005724AD /* ELGAddScorePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9C1191A75A2ED005724AD /* ELGAddScorePlayerController.m */; };
@@ -38,8 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9E3D12B01A76D97900535663 /* mahjong_tile.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = mahjong_tile.icns; sourceTree = "<group>"; };
-		9E3D12B21A76D98100535663 /* mahjong_tile.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = mahjong_tile.icns; sourceTree = "<group>"; };
+		6E88FB2A1C2BC4E100C1E8D5 /* mainIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = mainIcon.icns; sourceTree = "<group>"; };
+		6E88FB361C2BCC7E00C1E8D5 /* compassLines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compassLines.png; sourceTree = "<group>"; };
 		9EAAF5A71A76E0E900F15A4E /* ELGEndGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELGEndGameController.h; sourceTree = "<group>"; };
 		9EAAF5A81A76E0E900F15A4E /* ELGEndGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELGEndGameController.m; sourceTree = "<group>"; };
 		9EAAF5A91A76E0E900F15A4E /* ELGEndGameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELGEndGameController.xib; sourceTree = "<group>"; };
@@ -67,7 +66,6 @@
 		9EE9C10C1A7575B8005724AD /* ELGMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELGMainWindowController.h; sourceTree = "<group>"; };
 		9EE9C10D1A7575B8005724AD /* ELGMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELGMainWindowController.m; sourceTree = "<group>"; };
 		9EE9C10E1A7575B8005724AD /* ELGMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELGMainWindowController.xib; sourceTree = "<group>"; };
-		9EE9C1111A757732005724AD /* compass-md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass-md.png"; sourceTree = "<group>"; };
 		9EE9C1131A757EC9005724AD /* ELGAddScoresController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELGAddScoresController.h; sourceTree = "<group>"; };
 		9EE9C1141A757EC9005724AD /* ELGAddScoresController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELGAddScoresController.m; sourceTree = "<group>"; };
 		9EE9C1151A757EC9005724AD /* ELGAddScoresController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELGAddScoresController.xib; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 		9EE9C0D41A7569C9005724AD = {
 			isa = PBXGroup;
 			children = (
-				9E3D12B21A76D98100535663 /* mahjong_tile.icns */,
 				9EE9C0E61A7569C9005724AD /* Mahjong ScoreKeeper */,
 				9EE9C0DF1A7569C9005724AD /* Frameworks */,
 				9EE9C0DE1A7569C9005724AD /* Products */,
@@ -178,11 +175,11 @@
 		9EE9C0E71A7569C9005724AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E88FB361C2BCC7E00C1E8D5 /* compassLines.png */,
+				6E88FB2A1C2BC4E100C1E8D5 /* mainIcon.icns */,
 				9EFEFD0D1A849128006327E6 /* description.rtf */,
 				9EE9C0E81A7569C9005724AD /* Mahjong ScoreKeeper-Info.plist */,
 				9EE9C0E91A7569C9005724AD /* InfoPlist.strings */,
-				9EE9C1111A757732005724AD /* compass-md.png */,
-				9E3D12B01A76D97900535663 /* mahjong_tile.icns */,
 				9EE9C0EC1A7569C9005724AD /* main.m */,
 				9EE9C0EE1A7569C9005724AD /* Mahjong ScoreKeeper-Prefix.pch */,
 				9EE9C0EF1A7569C9005724AD /* Credits.rtf */,
@@ -247,15 +244,14 @@
 				9EE9C0F71A7569C9005724AD /* MainMenu.xib in Resources */,
 				9EE9C1041A756FD8005724AD /* ELGAddPlayersController.xib in Resources */,
 				9EE9C1101A7575B8005724AD /* ELGMainWindowController.xib in Resources */,
-				9EE9C1121A757732005724AD /* compass-md.png in Resources */,
+				6E88FB2B1C2BC4E100C1E8D5 /* mainIcon.icns in Resources */,
 				9EE9C1171A757EC9005724AD /* ELGAddScoresController.xib in Resources */,
 				9EE9C11C1A75A2EE005724AD /* ELGAddScorePlayerController.xib in Resources */,
-				9E3D12B11A76D97900535663 /* mahjong_tile.icns in Resources */,
-				9E3D12B31A76D98100535663 /* mahjong_tile.icns in Resources */,
 				9EAAF5AB1A76E0E900F15A4E /* ELGEndGameController.xib in Resources */,
 				9EF6564C1A7C844E00FB7FC3 /* ELGPreferencePaneController.xib in Resources */,
 				9EFEFD071A847DEB006327E6 /* ELGSettingsViewController.xib in Resources */,
 				9EFEFD0C1A848996006327E6 /* ELGDescriptionViewController.xib in Resources */,
+				6E88FB3E1C2BCC7E00C1E8D5 /* compassLines.png in Resources */,
 				9EFEFD0E1A849128006327E6 /* description.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

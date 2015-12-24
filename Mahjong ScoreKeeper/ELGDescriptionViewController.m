@@ -31,7 +31,7 @@
 
 - (void)populateTextView
 {
-    [description readRTFDFromFile:@"/Users/Liza Girsova/Documents/_Work/_Programming Projects/Mahjong ScoreKeeper/Mahjong ScoreKeeper/description.rtf"];
+    [description readRTFDFromFile:[[NSBundle mainBundle] pathForResource: @"description" ofType: @"rtf"]];
 }
 
 @end
