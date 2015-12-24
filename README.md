@@ -1,6 +1,6 @@
 # Mahjong ScoreKeeper
 --
-<img src="/Users/Liza/Documents/_Work/_Programming/_ProgrammingProjects/MahjongScoreKeeper/Mahjong ScoreKeeper/mainIcon.png" style="float: right;">
+<img src="mainIcon.png" style="float: right;">
 This is a Mac OS X application that helps the user keep track of scores and player "winds" in the traditional 4-player Mahjong game. 
 
 It works by letting the user specify the different combinations each player collected during each round of the game. The application then automatically calculates the scores based on the specified combinations.
@@ -9,13 +9,13 @@ It works by letting the user specify the different combinations each player coll
 
 ### Screenshots
 ##### Main Window
-![screenshot](/Users/Liza/Documents/_Work/_Programming/_ProgrammingProjects/MahjongScoreKeeper/Mahjong ScoreKeeper/screenshots/mainWindow.png)
+![screenshot](/screenshots/mainWindow.png)
 
 ##### Add Scores Window
-![screenshot](/Users/Liza/Documents/_Work/_Programming/_ProgrammingProjects/MahjongScoreKeeper/Mahjong ScoreKeeper/screenshots/addScores.png)
+![screenshot](/screenshots/addScores.png)
 
 ##### Preferences Window
-![screenshot](/Users/Liza/Documents/_Work/_Programming/_ProgrammingProjects/MahjongScoreKeeper/Mahjong ScoreKeeper/screenshots/preferences.png)
+![screenshot](/screenshots/preferences.png)
 
 
 ### Minimum System Requirements
