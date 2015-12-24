@@ -1,5 +1,5 @@
 # Mahjong ScoreKeeper
-<img src="mainIcon.png" style="float: right;">
+<img src="mainIcon.png" align="right">
 This is a Mac OS X application that helps the user keep track of scores and player "winds" in the traditional 4-player Mahjong game. 
 
 It works by letting the user specify the different combinations each player collected during each round of the game. The application then automatically calculates the scores based on the specified combinations.
